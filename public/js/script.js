@@ -1,5 +1,7 @@
 const socket = io();
 
+let lastEmitTime = 0;
+const EMIT_INTERVAL = 3000;
 
 if(navigator.geolocation) {
   navigator.geolocation.watchPosition((position) => {
